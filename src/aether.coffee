@@ -11,6 +11,7 @@ escodegen = require 'escodegen'
 defaults = require './defaults'
 problems = require './problems'
 execution = require './execution'
+utils = require './utils'
 morph = require './morph'
 transforms = require './transforms'
 
@@ -21,6 +22,9 @@ module.exports = class Aether
   @defaults: defaults
   @problems: problems
   @execution: execution
+
+  utilityHelpers: ->
+    utils
 
   #MODIFIES: @options
   #EFFECTS: Initialize the Aether object by modifying @options by combining the default options with the options parameter
